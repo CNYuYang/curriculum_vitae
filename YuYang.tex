@@ -1,0 +1,266 @@
+%Packages
+\documentclass[11 pt, a4paper, usenames, dvipsnames]{article}
+\usepackage{amsmath,amsfonts, lipsum}
+\usepackage[margin = 1in,textwidth = 16cm, includefoot]{geometry}
+\usepackage { url, multicol}
+\usepackage{sectsty,fontawesome}
+\usepackage{enumitem}
+\usepackage{parcolumns}
+\usepackage{amssymb}
+\usepackage{nth}
+\usepackage{makecell}
+\usepackage{paracol}
+ \usepackage{vwcol}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[x11names]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{ctex}
+\usepackage{setspace}       
+\usepackage[default]{gillius}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[many]{tcolorbox}
+\usepackage{hyperref}                                               
+\usepackage{color}
+
+%Main color, choose your main color as you wish by changing rgb
+\definecolor{CV_Color}{rgb}{0.01, 0.31, 0.59}
+
+%Image path, setup your path accordingly
+\graphicspath{ {C:/Users/kerem/Desktop/ResimCV} }
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Black,
+    filecolor=magenta,      
+    urlcolor=Black,
+}
+
+\newtcbox{\mybox}{nobeforeafter,colframe=CV_Color,colback=CV_Color,boxrule=0.5pt,arc=6pt,
+boxsep=3pt,left=4pt,right=4pt,top=4pt,bottom=4pt, height=25pt,valign=center} 
+
+\date{}
+
+%Page margins
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=8mm,
+right = 8mm,
+ top=8mm,
+bottom = 5mm,
+ }
+\pagenumbering{gobble}
+
+%Fonts of sections, you can change sizes and color as you wish
+\newcommand*{\SubFont}{%
+      \fontsize{15}{8}%
+\color{Gray}
+      \selectfont}
+
+\newcommand*{\RoleFont}{%
+      \fontsize{14}{8}%
+\color{Black}%
+\bf
+      \selectfont}
+
+\newcommand*{\DateFont}{%
+      \fontsize{10}{8}%
+\color{Gray}%
+\it
+      \selectfont}
+
+\newcommand*{\AchFont}{%
+      \fontsize{11}{8}%
+\color{Gray}%
+      \selectfont}
+
+\newcommand*{\TitleFont}{%
+      \fontsize{24}{10}%
+\color{CV_Color}
+      \selectfont}
+
+\newcommand*{\ProfileFont}{%
+      \fontsize{10}{2}%
+\color{Black}
+      \selectfont}
+
+\newcommand*{\SectionFont}{%
+      \fontsize{16}{5}%
+\color{CV_Color}%
+\bf
+\selectfont}
+
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle,draw, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   		INTRODUCTIONPART			  %%		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setmainfont{Fira Mono for Powerline}
+
+\setcolumnwidth{0.43\textwidth,0.25\textwidth,0.35\textwidth }
+\begin{paracol}{3} 
+\begin{flushleft}
+% Write name and personal information accordingly
+{\textbf{\TitleFont{余阳}}} \vspace{-0.4em}
+\end{flushleft}
+{\SubFont{Java工程师}}\vspace{0.7em} \\ 
+{\ProfileFont 对品质的追求及对雕琢细节的狂热追求，对未知事物有着强烈的好奇心，有着自我驱动的学习力和找到问题答案的能力。}
+  \switchcolumn[1]
+\begin {center}
+\roundpic[xshift=-0.03cm,yshift=0cm]{3.75cm}{3.75cm}{photo}
+
+\end{center}
+  \switchcolumn[2]
+ \begin{itemize}
+% Write contact information.
+\item[] \hfill\ProfileFont \href{mailto:744727849@qq.com}{744727849@qq.com} \enskip\color{CV_Color} \verb||\faEnvelopeO 
+\item[]\hfill \ProfileFont {+86 17786456292} \enskip\color{CV_Color} \verb||\faPhone
+\item[] \hfill \ProfileFont{湖北 武汉} \enskip\color{CV_Color} \verb||\faLocationArrow
+\item[] \hfill\ProfileFont\href{https://yuyang.run}{yuyang.run} \enskip \color{CV_Color}\verb||\faLink
+\item[]\hfill \ProfileFont\href{https://github.com/CNYuYang} {CNYuYang} \enskip\color{CV_Color} \verb||\faGithub
+\end{itemize} 
+\end{paracol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   							 MAIN  PART					 	     	        %%		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcolumnwidth{0.5\textwidth,0.5\textwidth }
+\setlength{\columnsep}{2.8em}
+\vspace{-2pt}
+\begin{paracol}{2} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   			          EXPERIENCE  PART	   		              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{\SectionFont\faCubes\enskip  EXPERIENCE}\vspace{-15pt}
+\par\noindent\rule{0.22\textwidth}{0.4pt}
+%\newline
+\begin{itemize}[leftmargin=0pt,align=left,labelwidth=\parindent,labelsep=0pt]
+
+\item[] {\RoleFont Java实习生 } \\
+\normalfont 武汉青藤云安全 \\ 
+{\DateFont 2020.7 - 至今 \hfill 湖北武汉 } \\ 
+{\color{CV_Color}\LARGE - }{蜂巢容器安全开发小组，负责产品配套Jenkins插件开发，以及规则平台新功能的开发。 }
+
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         PROJECTS  PART	  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\SectionFont\faPaperPlane\enskip PROJECTS}\vspace{-15pt}
+\par\noindent\rule{0.18\textwidth}{0.4pt}\vspace{-1pt}
+%\newline
+\begin{itemize}[leftmargin=0pt,align=left,labelwidth=\parindent,labelsep=0pt]
+
+
+\item[] \href{https://github.com/CNYuYang/MapReduce}{\textbf{MapReduce分布式计算框架}} \verb||\faGithub\enskip \\ 
+使用Java编写的一个分布式计算框架，本项目为MapReduce的最简实现，未引入任何第三方库，Master能保证线程安全的向Worker分配Map、Reduce任务，通过Socket完成Rpc通信。
+
+\item[] \href{https://github.com/CNYuYang/BusTub}{\textbf{BusTub}} \verb||\faGithub \enskip \\ 
+正在学习CMU 15-445数据库课程，实现中的一个关系型数据库，目前已完成Buffer Pool部分。在对原C++代码阅读并理解后，该项目使用Java重构，并编写配套测试代码。
+
+\item[] {\textbf{容器安全扫描Jenkins插件}}
+\verb||\enskip \\ 
+配合容器安全产品的Jenkins插件，在客户CI/CD的过程中，对构建出来的镜像实现自动扫描，分析其风险程度，从而阻断workflow。
+
+\item[] {\textbf{KB机制规则平台}}
+\verb||\enskip \\ 
+在原有规则平台的基础之上，针对公司新KB机制，编写规则管理页面，提供KB记录的增删改查功能。项目使用easy ui + PHP开发。
+
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       LANGUAGE  PART       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\SectionFont\faComment\enskip LANGUAGE}\vspace{-15pt}
+\par\noindent\rule{0.22\textwidth}{0.4pt}
+\vspace{-1em}
+\begin{itemize}[leftmargin=0pt,align=left,labelwidth=\parindent,labelsep=0pt]
+\setlength{\columnsep}{0.2em}
+\begin{multicols}{2}
+
+\item[] {English} \\
+{\color{CV_Color} CET-4}
+
+\end{multicols}
+\end{itemize}
+
+
+\switchcolumn[1]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   			          EDUCATION  PART	   		              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\SectionFont\faMortarBoard\enskip EDUCATION}\vspace{-15pt}
+\par\noindent\rule{0.22\textwidth}{0.4pt} \vspace{0.4pt}
+\begin{itemize}[leftmargin=0pt,align=left,labelwidth=\parindent,labelsep=0pt]
+	
+\item[] {\RoleFont 武汉理工大学} \\
+\normalfont 通信工程 \\
+{\DateFont 2017.9 - 至今 \hfill 湖北武汉 }\\
+{\color{CV_Color}\LARGE - } 获院三好学生,担任电子科技协会会长, GPA 3.439.
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 	   SKILLS  PART 		  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\SectionFont\faStar\enskip SKILLS}\vspace{-15pt}
+\par\noindent\rule{0.15\textwidth}{0.4pt} 
+\begin{itemize}[leftmargin=0pt,align=left,labelwidth=\parindent,labelsep=0pt]
+
+\item[] {\normalfont {基础}} \\
+{\AchFont 数据结构与算法、\href{https://www.bilibili.com/video/av31289365}{\textbf{CMU15-213计算机系统}}、\href{https://www.bilibili.com/video/av70600292}{\textbf{编译原理}}、\href{https://www.bilibili.com/video/av85655193}{\textbf{CMU15-445数据库}}、\href{https://www.bilibili.com/video/av91748150}{\textbf{MIT6.824分布式系统}}}
+
+
+\item[] {\normalfont {前端}} \\
+{\AchFont 熟悉HTML、CSS、JavaScript，掌握Jquery、Vue.js等框架，及Webpack等工具的使用。}
+
+\item[] {\normalfont {后端}} \\
+{\AchFont Java基础扎实，对Spring框架比较了解，掌握Spring Boot开发流程
+，能搭配MyBatis等框架完成后端开发。熟悉Node.js开发模式，掌握Express等框架开发方式。熟悉PHP开发方式，能独立维护相关工程。能熟练使用Docker容器。}
+
+\item[] {\normalfont {移动端}} \\
+{\AchFont 熟悉Android开发，熟练掌握 Android UI 开发，包括各种控件、布局方式、动画和自定义控件的使用方法。}
+
+\end {itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       ACHIEVEMENTS  PART	  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{\SectionFont\faTrophy\enskip ACHIEVEMENTS}\vspace{-15pt}
+\par\noindent\rule{0.26\textwidth}{0.4pt}
+\begin{itemize}[leftmargin=0pt,align=left,labelwidth=\parindent,labelsep=0pt]
+	
+\item[] \href{http://dasai.lanqiao.cn/pages/dasai/index.html}{\normalfont {湖北省 Java A组 三等奖}} \\
+{\AchFont 第十届蓝桥杯全国软件和信息技术专业人才大赛省赛}
+
+
+\item[] \href{http://gjcxcy.bjtu.edu.cn/Index.aspx}{\normalfont {2019年国家级 创业训练类}} \\
+{\AchFont 国家级大学生创新创业训练计划}
+
+\item[] \href{https://www.nuedc-training.com.cn/}{\normalfont {湖北省 一等奖 F题 }} \\
+{\AchFont 2019年全国大学生电子设计大赛  }
+
+\end {itemize}
+\vspace{-0.2em}
+
+\end{paracol}
+\end{document}
